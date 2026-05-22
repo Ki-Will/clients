@@ -30,15 +30,15 @@
     "storybook:combined": "STORYBOOK_DEV=\"combined\" concurrently \"npm run storybook\" \"npm run storybook:autofill:combined\"",
     "storybook:autofill": "cd apps/browser/src/autofill/content/components && npm run storybook:lit",
     "storybook:autofill:combined": "cd apps/browser/src/autofill/content/components && npm run storybook:lit:combined",
-    "build-storybook": "ng run components:build-storybook",
-    "build-storybook:ci": "ng run components:build-storybook --webpack-stats-json",
-    "build-storybook:autofill:ci": "cd apps/browser/src/autofill/content/components && npm run storybook:build-lit:ci",
+    "build-storybook": "node init && ng run components:build-storybook",
+    "build-storybook:ci": "node init && ng run components:build-storybook --webpack-stats-json",
+    "build-storybook:autofill:ci": "node init && cd apps/browser/src/autofill/content/components && npm run storybook:build-lit:ci",
     "test-stories": "test-storybook --url http://localhost:6006 --maxWorkers=2 --testTimeout=100000 --failOnConsole",
     "test-stories:watch": "test-stories --watch",
     "icons:build": "ts-node scripts/material-icons/build-with-bwi-names.ts",
     "icons:migrate": "ts-node scripts/material-icons/migrate-icon-names.ts",
     "icons:reverse-migrate": "ts-node scripts/material-icons/reverse-migrate-icon-names.ts",
-    "dev:reverse-proxy": "node --experimental-strip-types scripts/reverse-proxy-emulator/index.ts"
+    "dev:reverse-proxy": "node init && node --experimental-strip-types scripts/reverse-proxy-emulator/index.ts"
   },
   "workspaces": [
     "apps/*",

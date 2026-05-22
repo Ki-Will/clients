@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
-    "build": "node scripts/build.js",
+    "build": "node init && node scripts/build.js",
     "test": "cargo test"
   },
   "author": "",

@@ -15,7 +15,7 @@
   "scripts": {
     "test": "jest",
     "clean": "rimraf dist",
-    "build": "npm run clean && tsc",
-    "build:watch": "npm run clean && tsc -watch"
+    "build": "node init && npm run clean && tsc",
+    "build:watch": "node init && npm run clean && tsc -watch"
   }
 }
