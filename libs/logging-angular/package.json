@@ -10,6 +10,6 @@
   "author": "platform",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "tsc --noEmit -p tsconfig.lib.json"
+    "build": "node init && tsc --noEmit -p tsconfig.lib.json"
   }
 }
